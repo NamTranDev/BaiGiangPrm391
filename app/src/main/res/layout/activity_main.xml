@@ -21,9 +21,89 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Animation Code"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bt_exercise2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_animation_xml" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_exercise2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exercise 2"
+        app:layout_constraintBottom_toTopOf="@+id/bt_lab_3_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_animation_code" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_lab_3_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab 3.1"
+        app:layout_constraintBottom_toTopOf="@+id/bt_lab_3_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_exercise2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_lab_3_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab 3.2"
+        app:layout_constraintBottom_toTopOf="@+id/bt_lab_3_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_lab_3_1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_lab_3_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab 3.3"
+        app:layout_constraintBottom_toTopOf="@id/bt_lab_3_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_lab_3_2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_lab_3_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab 3.6"
+        app:layout_constraintBottom_toTopOf="@+id/bt_lab_3_7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_lab_3_3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_lab_3_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab 3.7"
+        app:layout_constraintBottom_toTopOf="@+id/bt_lab_3_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_lab_3_6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_lab_3_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab 3.8"
+        app:layout_constraintBottom_toTopOf="@+id/bt_lab_3_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_lab_3_7" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_lab_3_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab 3.9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_lab_3_8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

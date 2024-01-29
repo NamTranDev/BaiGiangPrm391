@@ -23,6 +23,14 @@
         </activity>
         <activity android:name=".AnimationXmlActivity"/>
         <activity android:name=".AnimationCodeActivity"/>
+        <activity android:name=".exercise2.Exercise2Activity"/>
+        <activity android:name=".lab.Lab3_1Activity"/>
+        <activity android:name=".lab.Lab3_2Activity"/>
+        <activity android:name=".lab.Lab3_3Activity"/>
+        <activity android:name=".lab.Lab3_6Activity"/>
+        <activity android:name=".lab.Lab3_7Activity"/>
+        <activity android:name=".lab.Lab3_8Activity"/>
+        <activity android:name=".lab.Lab3_9Activity"/>
     </application>
 
 </manifest>

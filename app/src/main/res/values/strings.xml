@@ -1,10 +1,54 @@
-<resources>
-    <string name="app_name">BaiGiangPrm391</string>
-    <string name="blink">BLINK</string>
-    <string name="clockwise">ROTATE</string>
-    <string name="fade">FADE</string>
-    <string name="move">MOVE</string>
-    <string name="slide">SLIDE</string>
-    <string name="zoom">ZOOM</string>
-    <string name="stop_animation">STOP ANIMATION</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">BaiGiangPrm391</string>
+    <string name="blink" translatable="false">BLINK</string>
+    <string name="clockwise" translatable="false">ROTATE</string>
+    <string name="fade" translatable="false">FADE</string>
+    <string name="move" translatable="false">MOVE</string>
+    <string name="slide" translatable="false">SLIDE</string>
+    <string name="zoom" translatable="false">ZOOM</string>
+    <string name="stop_animation" translatable="false">STOP ANIMATION</string>
+
+
+    <string name="txt_rabbit">Rabbit</string>
+    <string name="txt_cat" translatable="false">Cat</string>
+
+    <string name="txt_name">Rabbit</string>
+    <string name="txt_desc">Rabbits are small mammals in the family Leporidae (along with the hare) of the order Lagomorpha (along with the pika). Oryctolagus cuniculus includes the European rabbit species and its descendants, the world\'s 305 breeds[1] of domestic rabbit. Sylvilagus includes 13 wild rabbit species, among them the seven types of cottontail. The European rabbit, which has been introduced on every continent except Antarctica, is familiar throughout the world as a wild prey animal and as a domesticated form of livestock and pet. With its widespread effect on ecologies and cultures, the rabbit (or bunny) is, in many areas of the world, a part of daily life—as food, clothing, a companion, and a source of artistic inspiration.</string>
+
+    <string name="txt_scale" translatable="false">Scale</string>
+    <string name="txt_trans" translatable="false">Trans</string>
+    <string name="txt_rotate" translatable="false">Rotate</string>
+    <string name="txt_alpha" translatable="false">Alpha</string>
+    <string name="txt_loading" translatable="false">Loading</string>
+
+    <string name="txt_name1" translatable="false">Ali Connors</string>
+    <string name="txt_phone1" translatable="false">(650) 555-1234</string>
+    <string name="txt_title_mobile" translatable="false">Mobile</string>
+    <string name="txt_phone2" translatable="false">(323) 555-6789</string>
+    <string name="txt_email" translatable="false">aliconnors@example.com</string>
+
+    <string name="txt_login" translatable="false">Login</string>
+
+    <string name="hint_email" translatable="false">Email</string>
+
+    <string name="hint_password" translatable="false">Password</string>
+
+    <string name="txt_forgot_pass" translatable="false">Forgot password?</string>
+
+    <string name="txt_no_account"  translatable="false">Dont have an account ?</string>
+
+    <string name="txt_register" translatable="false">Register</string>
+
+    <string name="txt_mess" translatable="false">Essentials</string>
+    <string name="txt_flight" translatable="false">While Traveling</string>
+    <string name="txt_hospital" translatable="false">Help / Medical</string>
+    <string name="txt_hotel" translatable="false">At the hotel</string>
+    <string name="txt_restaurant" translatable="false">At the Restaurant</string>
+    <string name="txt_coctail" translatable="false">At the Bar</string>
+    <string name="txt_store" translatable="false">At the Store</string>
+    <string name="txt_work" translatable="false">Work</string>
+    <string name="txt_time" translatable="false">Time</string>
+    <string name="txt_education" translatable="false">Education</string>
+    <string name="txt_movie" translatable="false">Entertainment</string>
+
 </resources>
