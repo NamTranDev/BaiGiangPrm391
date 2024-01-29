@@ -101,9 +101,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lab 3.9"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bt_asm1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_lab_3_8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_asm1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Asm1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_lab_3_9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

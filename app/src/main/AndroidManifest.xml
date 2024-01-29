@@ -31,6 +31,8 @@
         <activity android:name=".lab.Lab3_7Activity"/>
         <activity android:name=".lab.Lab3_8Activity"/>
         <activity android:name=".lab.Lab3_9Activity"/>
+        <activity android:name=".asm1.Asm1Activity"/>
+        <activity android:name=".asm1.DetailActivity"/>
     </application>
 
 </manifest>

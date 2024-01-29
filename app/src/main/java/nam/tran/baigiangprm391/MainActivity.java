@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import nam.tran.baigiangprm391.asm1.Asm1Activity;
 import nam.tran.baigiangprm391.exercise2.Exercise2Activity;
 import nam.tran.baigiangprm391.lab.Lab3_1Activity;
 import nam.tran.baigiangprm391.lab.Lab3_2Activity;
@@ -90,6 +91,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openScreen(Lab3_9Activity.class);
+            }
+        });
+
+        findViewById(R.id.bt_asm1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openScreen(Asm1Activity.class);
             }
         });
     }

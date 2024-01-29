@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimens detail -->
+    <dimen name="image_height">40px</dimen>
+    <dimen name="detail_padding">10dp</dimen>
+    <dimen name="detail_margin">20dp</dimen>
+    <dimen name="detail_text_size_text_view">22sp</dimen>
+    <dimen name="image_long">30dp</dimen>
+    <dimen name="image_margin_left">250dp</dimen>
+    <dimen name="one">1</dimen>
+
+    <!-- Dimens main -->
+    <dimen name="main_image_height">400px</dimen>
+    <dimen name="main_grid_view_height">450dp</dimen>
+    <dimen name="main_horizontal_spacing">20dp</dimen>
+    <dimen name="three">3</dimen>
+    <dimen name="main_vertical_spacing">50dp</dimen>
+    <dimen name="main_margin_left">10dp</dimen>
+
+    <!-- Dimens list animals -->
+    <dimen name="animal_image_view">80dp</dimen>
+    <dimen name="animal_image_view_24dp">24dp</dimen>
+    <dimen name="animal_margin_start">4dp</dimen>
+    <dimen name="animaL_margin_top">56dp</dimen>
+</resources>
