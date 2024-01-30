@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_toast"
+        android:id="@+id/bt_toast_simple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Toast Example"
-        app:layout_constraintBottom_toTopOf="@+id/bt_dialog"
+        android:text="Toast Simple"
+        app:layout_constraintBottom_toTopOf="@+id/bt_toast_custom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_dialog"
+        android:id="@+id/bt_toast_custom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dialog Example"
+        android:text="Toast Custom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_toast" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_toast_simple" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
