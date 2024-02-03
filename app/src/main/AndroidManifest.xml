@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -23,6 +25,12 @@
         </activity>
         <activity android:name=".toast.ToastActivity"/>
         <activity android:name=".dialog.DialogActivity"/>
+        <activity android:name=".fragment.FragmentStaticDefinitionActivity"/>
+        <activity android:name=".fragment.FragmentDynamicDefinitionActivity"/>
+        <activity android:name=".exercise.Exercise3Activity"/>
+        <activity android:name=".exercise.DetailActivity"/>
+        <activity android:name=".lab.Lab4_1Activity"/>
+        <activity android:name=".lab.Lab4_2_3Activity"/>
     </application>
 
 </manifest>

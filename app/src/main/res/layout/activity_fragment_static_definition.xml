@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fragment_static_example_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        class="nam.tran.baigiangprm391.fragment.StaticExample1Fragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_static_example_2"/>
+
+    <fragment
+        android:id="@+id/fragment_static_example_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        class="nam.tran.baigiangprm391.fragment.StaticExample2Fragment"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_static_example_1"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
