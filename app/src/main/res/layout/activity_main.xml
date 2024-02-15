@@ -11,9 +11,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Notification Example"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bt_card_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CardView Example"
+        app:layout_constraintBottom_toTopOf="@+id/bt_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_notification" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recycler Example"
+        app:layout_constraintBottom_toTopOf="@+id/bt_view_pager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_card_view" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ViewPager Example"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_recycler_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

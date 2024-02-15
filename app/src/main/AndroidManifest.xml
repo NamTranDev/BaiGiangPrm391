@@ -24,6 +24,10 @@
         </activity>
         <activity android:name=".notification.NotificationActivity"/>
         <activity android:name=".notification.ResultNotificationActivity"/>
+        <activity android:name=".cardview.CardViewActivity"/>
+        <activity android:name=".recyclerview.RecyclerViewActivity"/>
+        <activity android:name=".viewpager.ViewPagerActivity"/>
+        <activity android:name=".viewpager.ViewPagerExampleActivity"/>
     </application>
 
 </manifest>
