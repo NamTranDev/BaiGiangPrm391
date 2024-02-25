@@ -142,10 +142,9 @@ public class Lab6Activity extends AppCompatActivity implements View.OnClickListe
         //ContentResolver cho phép truy cập đến tài nguyên của ứng dụng thông qua 1 đường dẫn uri
         Cursor cursor = getContentResolver().query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,
                 null, null, null, null);
-        if (cursor != null) {
-            cursor.moveToFirst();
-            listSong.clear();
-            while (!cursor.isAfterLast()) {
+        listSong.clear();
+        if (cursor != null && cursor.moveToFirst()) {
+            while (cursor.moveToNext()) {
                 String name = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
                 String path = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA));
                 String album = "N/A";
@@ -153,7 +152,6 @@ public class Lab6Activity extends AppCompatActivity implements View.OnClickListe
                     album = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ARTIST));
                 }
                 listSong.add(new SongEntity(name, path, album));
-                cursor.moveToNext();
             }
             cursor.close();
         }
