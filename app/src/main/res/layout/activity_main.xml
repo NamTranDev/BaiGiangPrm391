@@ -21,9 +21,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Runtime Permission Example"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bt_lab_6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_normal_permission" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_lab_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab 6 Music Player"
+        app:layout_constraintBottom_toTopOf="@+id/bt_exercise_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_runtime_permission" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_exercise_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exercise 4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_lab_6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

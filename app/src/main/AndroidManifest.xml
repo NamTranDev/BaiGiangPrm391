@@ -8,6 +8,8 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -30,6 +32,19 @@
         </activity>
         <activity android:name=".permission.NormalPermissionActivity"/>
         <activity android:name=".permission.RuntimePermissionActivity"/>
+        <activity android:name=".lab6.Lab6Activity"/>
+        <activity android:name=".exercise4.Exercise4Activity"/>
+
+        <receiver android:name=".exercise4.ServiceReceiver"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PHONE_STATE" />
+
+            </intent-filter>
+
+        </receiver>
     </application>
 
 </manifest>
