@@ -34,6 +34,8 @@ import nam.tran.baigiangprm391.R;
 
 public class Lab6Activity extends AppCompatActivity implements View.OnClickListener, SeekBar.OnSeekBarChangeListener {
 
+    private static final String TAG = "Lab6Activity ------------ ";
+
     private static final int LEVEL_PAUSE = 0;
     private static final int LEVEL_PLAY = 1;
     //Khai báo trình nghe nhạc MediaPlayer
@@ -83,8 +85,9 @@ public class Lab6Activity extends AppCompatActivity implements View.OnClickListe
     private void checkPermissionAndLoad(){
         // Kiểm tra cấp quyền đọc bộ nhớ ngoài READ_EXTERNAL_STORAGE
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 101);
+            String permission = Build.VERSION.SDK_INT >= 33 ? Manifest.permission.READ_MEDIA_AUDIO : Manifest.permission.READ_EXTERNAL_STORAGE;
+            if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{permission}, 101);
                 return;
             }
         }
@@ -97,11 +100,13 @@ public class Lab6Activity extends AppCompatActivity implements View.OnClickListe
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        if (requestCode == 101 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            loadingListSongOffline();
-        } else {
-            Toast.makeText(this, R.string.txt_alert, Toast.LENGTH_SHORT).show();
-            gotoSettings();
+        if (requestCode == 101) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                loadingListSongOffline();
+            }else {
+                Toast.makeText(this, R.string.txt_alert, Toast.LENGTH_SHORT).show();
+                gotoSettings();
+            }
         }
     }
 
@@ -109,6 +114,7 @@ public class Lab6Activity extends AppCompatActivity implements View.OnClickListe
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 111){
+            Log.d(TAG,"onActivityResult");
             checkPermissionAndLoad();
         }
     }
@@ -119,14 +125,10 @@ public class Lab6Activity extends AppCompatActivity implements View.OnClickListe
                 .setMessage("Accept permission in setting")
                 .setPositiveButton("Ok", (dialogInterface, i) -> {
                     try {
-                        Intent intent = new Intent();
-                        intent.setAction(
-                                Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                        Uri uri = Uri.fromParts("package",
-                                Lab6Activity.this.getPackageName(), null);
-                        intent.setData(uri);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivityForResult(intent,111);
+                        Intent myAppSettings = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                        myAppSettings.addCategory(Intent.CATEGORY_DEFAULT);
+                        myAppSettings.setData(Uri.parse("package:" + getPackageName()));
+                        startActivityForResult(myAppSettings, 111);
                     } catch (Exception e) {
                         Toast.makeText(Lab6Activity.this, "failed to open Settings\n" + e, Toast.LENGTH_LONG).show();
                         Log.d("error", e.toString());
@@ -138,13 +140,13 @@ public class Lab6Activity extends AppCompatActivity implements View.OnClickListe
 
     // Phương thức LoadingListSongOffLine() dùng để đọc data từ bộ nhớ ngoài và tạo listsong
     private void loadingListSongOffline() {
-
+//        String selection = "is_music != 0 AND title != ''";
         //ContentResolver cho phép truy cập đến tài nguyên của ứng dụng thông qua 1 đường dẫn uri
         Cursor cursor = getContentResolver().query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,
                 null, null, null, null);
         listSong.clear();
         if (cursor != null && cursor.moveToFirst()) {
-            while (cursor.moveToNext()) {
+            do {
                 String name = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
                 String path = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA));
                 String album = "N/A";
@@ -152,7 +154,7 @@ public class Lab6Activity extends AppCompatActivity implements View.OnClickListe
                     album = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ARTIST));
                 }
                 listSong.add(new SongEntity(name, path, album));
-            }
+            }while (cursor.moveToNext());
             cursor.close();
         }
 
@@ -238,11 +240,13 @@ public class Lab6Activity extends AppCompatActivity implements View.OnClickListe
         if (state == STATE_PLAYING && player.isPlaying()) {
             player.pause();
             ivPlay.setImageLevel(LEVEL_PAUSE);
+            ivPlay.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_play));
             state = STATE_PAUSED;
         } else if (state == STATE_PAUSED) {
             player.start();
             state = STATE_PLAYING;
             ivPlay.setImageLevel(LEVEL_PLAY);
+            ivPlay.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_pause));
         } else {
             play();
         }
@@ -263,6 +267,7 @@ public class Lab6Activity extends AppCompatActivity implements View.OnClickListe
             player.prepare();
             player.start();
             ivPlay.setImageLevel(LEVEL_PLAY);
+            ivPlay.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_pause));
             state = STATE_PLAYING;
             totalTime = getTime(player.getDuration());
             seekBar.setMax(player.getDuration());
