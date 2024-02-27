@@ -9,6 +9,8 @@ import nam.tran.baigiangprm391.exercise4.Exercise4Activity;
 import nam.tran.baigiangprm391.lab6.Lab6Activity;
 import nam.tran.baigiangprm391.permission.NormalPermissionActivity;
 import nam.tran.baigiangprm391.permission.RuntimePermissionActivity;
+import nam.tran.baigiangprm391.service.ServiceActivity;
+import nam.tran.baigiangprm391.sms.SmsActivity;
 import nam.tran.baigiangprm391.videoview.VideoViewActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.bt_lab_6).setOnClickListener(v -> openScreen(Lab6Activity.class));
         findViewById(R.id.bt_exercise_4).setOnClickListener(v -> openScreen(Exercise4Activity.class));
         findViewById(R.id.bt_video_view).setOnClickListener(v -> openScreen(VideoViewActivity.class));
+        findViewById(R.id.bt_service).setOnClickListener(v -> openScreen(ServiceActivity.class));
+        findViewById(R.id.bt_sms).setOnClickListener(v -> openScreen(SmsActivity.class));
     }
 
     void openScreen(Class screen) {

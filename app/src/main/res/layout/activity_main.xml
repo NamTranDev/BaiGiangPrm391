@@ -41,10 +41,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="VideoView"
-        app:layout_constraintBottom_toTopOf="@+id/bt_exercise_4"
+        app:layout_constraintBottom_toTopOf="@+id/bt_service"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_lab_6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service Example"
+        app:layout_constraintBottom_toTopOf="@+id/bt_sms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_video_view" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sms Example"
+        app:layout_constraintBottom_toTopOf="@+id/bt_exercise_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_service" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_exercise_4"
@@ -54,6 +74,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_video_view" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_sms" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

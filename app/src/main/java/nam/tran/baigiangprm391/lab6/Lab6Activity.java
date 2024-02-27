@@ -123,6 +123,7 @@ public class Lab6Activity extends AppCompatActivity implements View.OnClickListe
         new AlertDialog.Builder(this)
                 .setTitle("Need Permission")
                 .setMessage("Accept permission in setting")
+                .setCancelable(false)
                 .setPositiveButton("Ok", (dialogInterface, i) -> {
                     try {
                         Intent myAppSettings = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
@@ -317,7 +318,7 @@ public class Lab6Activity extends AppCompatActivity implements View.OnClickListe
     protected void onDestroy() {
         if (thread != null)
             thread.interrupt();
-
+        player.release();
         super.onDestroy();
     }
 
