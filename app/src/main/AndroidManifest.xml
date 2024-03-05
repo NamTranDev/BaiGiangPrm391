@@ -29,6 +29,7 @@
         <activity android:name=".internal.InternalStorageActivity"/>
         <activity android:name=".external.ExternalStorageActivity"/>
         <activity android:name=".sharepreference.SharePreferenceActivity"/>
+        <activity android:name=".database.DatabaseSqlActivity"/>
     </application>
 
 </manifest>

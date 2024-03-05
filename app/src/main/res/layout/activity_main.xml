@@ -41,9 +41,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Share Preference"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bt_database"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_external_storage" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_database"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Database Sql"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_share_reference" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
