@@ -6,13 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_lab7_download"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Lab 7 Download"
+        app:layout_constraintBottom_toTopOf="@+id/bt_lab7_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_lab7_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab 7 Login"
+        app:layout_constraintBottom_toTopOf="@+id/bt_asm3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_lab7_download" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_asm3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Asm 3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_lab7_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
