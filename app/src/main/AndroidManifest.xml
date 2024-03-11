@@ -42,6 +42,7 @@
         <activity android:name=".asm3.Asm3Activity"/>
         <activity android:name=".lab7_download.Lab7DownloadActivity"/>
         <activity android:name=".lab7_login.Lab7LoginActivity"/>
+        <activity android:name=".api.ApiActivity"/>
 
         <receiver android:name=".asm3.PhoneStateEmoijReceiver"
             android:exported="true">
